@@ -1,11 +1,3 @@
----
-
-layout: jekyll-theme-leap-day
-
-title: Data Processing
-
----
-
 GSoC 2020: Age Group Prediction in Images & Audio
 
 # Coding Phase
