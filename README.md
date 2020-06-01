@@ -15,7 +15,7 @@ GSoC 2020: Age Group Prediction in Images & Audio
 
    > “gallina” is a Red Hen Lab file server mounted on CWRU HPC
 
-   1. Log in**
+   1. Log in
 
       Open your terminal, enter:
 
@@ -42,7 +42,7 @@ GSoC 2020: Age Group Prediction in Images & Audio
       [<your_username>@hpc3 ~]$ 
       ```
 
-   2. **RSA**
+   2. add RSA
 
       Check your current path, you should in your home directory:
 
