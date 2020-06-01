@@ -1,15 +1,15 @@
-Bootstrap:docker 
+Bootstrap:docker  
 From:ubuntu:latest  
 
 %labels
-MAINTAINER Loewi
+MAINTAINER Xiaoyu
 
 %environment
 RAWR_BASE=/code
 export RAWR_BASE
 
 %runscript
-echo "This is singularity with tag" 
+echo "This is singularity with tag"
 exec /bin/bash /code/rawr.sh "$@"  
 
 %post  
