@@ -11,3 +11,12 @@ Tasks:
 - Setup gentle (https://github.com/lowerquality/gentle)
 - Extract mp3 from mp4 files.
 - Run gentle to align mp3 and text file.
+
+
+gentle:
+```
+git clone https://github.com/lowerquality/gentle.git
+cd gentle
+./install.sh
+python3 align.py audio.mp3 words.txt
+```
