@@ -18,11 +18,13 @@ gentle:
 git clone https://github.com/lowerquality/gentle.git
 cd gentle
 ./install.sh
-python3 align.py audio.mp3 words.txt
+python3 align.py input-audio.mp3 input-script.txt
 ```
 
 ffmpeg:
 
 ```
-brew install ffmpeg
+# brew install ffmpeg
+brew upgrade ffmpeg
+ffmpeg -i input-video.mp4 output-audio.mp3
 ```
