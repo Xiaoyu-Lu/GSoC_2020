@@ -20,3 +20,9 @@ cd gentle
 ./install.sh
 python3 align.py audio.mp3 words.txt
 ```
+
+ffmpeg:
+
+```
+brew install ffmpeg
+```
