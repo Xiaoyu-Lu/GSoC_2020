@@ -58,5 +58,35 @@
                   
   ```
 
+  - Created speakers's database by scraping dbpedia
   
+  - Built the corpus
+  ```
+      "2006-09-29_2000_US_CNN_Situation_Room": {
+        "Donald_Rumsfeld": {
+            "age": 35,
+            "gender": "female",
+            "time": [
+                [
+                    "20060929200535.000",
+                    "20060929200542.429"
+                ]
+            ]
+        },
+        "Howard_Dean": {
+            "age": 45,
+            "gender": "male",
+            "time": [
+                [
+                    "20060929200631.000",
+                    "20060929200644.333"
+                ]
+            ]
+        },
+        "Kathleen_Koch": {
+            "age": 51,
+            "gender": "male",
+            "time": [
+                .....
+```
 
