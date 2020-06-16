@@ -88,5 +88,7 @@
             "gender": "male",
             "time": [
                 .....
-```
-- Getting familiar with python toolkit for face detection, tracking, and clustering in videos
+  ```
+
+
+  - Getting familiar with python toolkit for face detection, tracking, and clustering in videos
