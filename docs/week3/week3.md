@@ -92,6 +92,6 @@
 
 
   - Getting familiar with python toolkit for face detection, tracking, and clustering in videos
-  
- ![](https://github.com/Xiaoyu-Lu/GSoC_2020/blob/master/docs/img/week3-sample.gif)
+    Output:
+    ![](https://github.com/Xiaoyu-Lu/GSoC_2020/blob/master/docs/img/week3-sample.gif)
 
