@@ -52,6 +52,16 @@ e.g. middle
 
 ...
 ```
+After face clustering, we can have the results like:
 
+![img](https://github.com/Xiaoyu-Lu/GSoC_2020/blob/master/docs/img/week4-fc0.png)
+
+![img](https://github.com/Xiaoyu-Lu/GSoC_2020/blob/master/docs/img/week4-fc1.png)
+
+Then, we need to figure out who is the speaker of the snippet.
+
+After the meeting with mentor, we made an assumption, the one has the longest duration is the right one.
+
+So we will randomly choose 12 snippets to test the assumption. 
 
 
