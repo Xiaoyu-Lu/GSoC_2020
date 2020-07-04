@@ -311,7 +311,7 @@ Then, we use this newly created corpus to trim the videos. We name the output fi
    ...
   ```
 
-  [img]
+  ![img](https://github.com/Xiaoyu-Lu/GSoC_2020/blob/master/docs/img/phase1-speakers_count.png)
 
   First, for the whole dataset, the time tuple whose duration is smaller than 3 seconds is removed, whose duration is greater than 30 seconds is cut to 30.  
 
@@ -358,7 +358,7 @@ Then, we use this newly created corpus to trim the videos. We name the output fi
    }
   ```
 
-  For example, the speaker_1 have 25 time intervals. We randomly select 2 from them:
+  For example, the speaker_1 have 25 time intervals:
 
   ```
   { file_1:{       
@@ -380,7 +380,7 @@ Then, we use this newly created corpus to trim the videos. We name the output fi
           ...
   ```
 
-  We use random.sample(database[file_1]\[speake_1]["time"],  k=2) to select two without replacement. 
+  If we want to randomly select 2 from them, we should use random.sample(database[file_1]\[speake_1]["time"],  k=2) to select two without replacement. 
 
   - **Problem encountered:**
 
@@ -409,7 +409,7 @@ Then, we use this newly created corpus to trim the videos. We name the output fi
 
 The script can write all the information of the video snippet into a csv file, if a snippet is extracted from the video. 
 
-[img]\(snippets_info_csv)
+![img](https://github.com/Xiaoyu-Lu/GSoC_2020/blob/master/docs/img/phase1-snippets_info_csv.png)
 
 
 
