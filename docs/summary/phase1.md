@@ -1,14 +1,20 @@
-
 Before we can predict people's age group in a video, we have to build a dataset that can feed into the machine learning model.
 
 - [Phase 1: Building Dataset](#phase-1--building-dataset)
 
   * [Step 1: Knowing what to do](#step-1--knowing-what-to-do)
+  
   * [Step 2: Finding useful paths](#step-2--finding-useful-paths)
+  
   * [Step 3: Extracting information from the tpt file](#step-3--extracting-information-from-the-tpt-file)
+  
   * [Step 4: Building a database for speakers](#step-4--building-a-database-for-speakers)
+  
   * [Step 5: Creating a lean corpus](#step-5--creating-a-lean-corpus)
+  
   * [Step 6: Extracting video snippets](#step-6--extracting-video-snippets)
+  
+    
 
 
 ### Phase 1: Building Dataset
@@ -241,8 +247,18 @@ Now, we have everything we need to extract the video snippets:  the input path (
 
   So I decided to use the gentle output to **redo Step 3**. 
 
-  *Peek into the gentle output:*
+  - **Problem encountered:**
 
+    While loading the json file using `json.loads(file)`, some `gentleoutput.json ` files triggered error  `TypeError: Input string must be text, not bytes`. After several attemps, it turned out that those json files contains *illegal* characters. So we can use nested replace function to eliminate those characters before loading the file.
+  
+    ```
+    with open(gentle_file, encoding='utf-8') as f:
+        tmp = f.read().replace(',}','}').replace(',]',']').replace('\t','').replace('\n','')
+        data = json.loads(tmp) 
+    ```
+  
+  *Peek into the gentle output:*
+  
        {
         "transcript": "\u266a Size overwhelming and e... "
         "words": [
@@ -256,9 +272,9 @@ Now, we have everything we need to extract the video snippets:  the input path (
             ],
             "start": 28.15,
             "startOffset": 20,
-            "word": "and"
+          "word": "and"
           }, 
-          ...
+        ...
           {
             "case": "not-found-in-audio",
             "endOffset": 52,
@@ -266,29 +282,29 @@ Now, we have everything we need to extract the video snippets:  the input path (
             "word": "regime"
            }, ...
   We can locate the word by `startOffset` and `endOffset` in the transcript. The transcript is extracted from the tpt file, so we can map it back to the tpt file. 
-
+  
   *Peek into the tpt file:*
-
+  
   ```
-  ...
+...
   20180415101153.580|20180415101157.184|NER_01|Person=Christi Paul|Role=CNN ANCHOR
-  20180415101153.580|20180415101155.048|CC1|>> PAUL: Sure. So, Juliette, if you are not going to get involved in a civil war and you are not going to displace this 
+20180415101153.580|20180415101155.048|CC1|>> PAUL: Sure. So, Juliette, if you are not going to get involved in a civil war and you are not going to displace this 
   20180415101155.115|20180415101156.550|CC1|leader, what are the 
-  20180415101156.617|20180415101157.117|CC1|options? 
+20180415101156.617|20180415101157.117|CC1|options? 
   20180415101157.184|20180415101255.743|NER_01|Person=Juliette Kayyem|Role=CNN NATIONAL SECURITY ANALYST
-  20180415101157.184|20180415101158.352|CC1|>> KAYYEM: So, there's two focuses that we will see 
+20180415101157.184|20180415101158.352|CC1|>> KAYYEM: So, there's two focuses that we will see 
   20180415101158.418|20180415101158.952|CC1|in the future. 
-  ...
+...
   ```
-
+  
   The transcript contains the text "*Sure. So, Juliette, if you are not going to get involved in a civil war and you are not going to displace this leader, what are the options?*" We locate this text in the transcript, from 11000 to 11139. Hence, get the corresponding `start`(701.83) and `end` time(710.38). 
-
+  
   - **Problem encountered:**
-
+  
     Not all words are aligned, some of them are "not-found-in-audio". In this case, we omit this time interval if one of the time (start and end) is not found. 
-
+  
   After the doing the step 3 again, we have a new corpus:
-
+  
   ```
   └── corpus_2018_new.json
   ```
