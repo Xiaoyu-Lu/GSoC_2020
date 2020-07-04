@@ -327,8 +327,6 @@ Then, we use this newly created corpus to trim the videos. We name the output fi
    ...
   ```
 
-  ![img](https://github.com/Xiaoyu-Lu/GSoC_2020/blob/master/docs/img/phase1-speakers_count.png)
-
   First, for the whole dataset, the time tuple whose duration is smaller than 3 seconds is removed, whose duration is greater than 30 seconds is cut to 30.  
 
   Next round, we only deal with the most appeared speakers whose time tuples' count is greater than 25 times. The time tuple whose duration is smaller than 5 seconds is removed, whose duration is greater than 20 seconds is cut to 20. 
@@ -344,7 +342,8 @@ Then, we use this newly created corpus to trim the videos. We name the output fi
    ('Jim_Sciutto', 1387),
    ...
   ```
-
+  ![img](https://github.com/Xiaoyu-Lu/GSoC_2020/blob/master/docs/img/phase1-speakers_count.png)
+  
   For the rest of "times", we can normalize the count of time intervals for the speakers in each files.
 
   ​	e.g.  James appeared in 5 files. The number of time intervals of each file is stored in an array, nums=[10, 30, 1, 150, 9]. We made 25 times as a threshold, then normalize the array .
