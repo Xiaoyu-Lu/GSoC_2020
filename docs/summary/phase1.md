@@ -95,7 +95,7 @@ For convenience, we dealt with the files year by year. Interestingly, 2005, 2010
 
 Then, we know who the speakers are, so we can create the database that stores all the information of the speakers for future use. 
 
-#### Step 4: Build a database for speakers
+#### Step 4: Building a database for speakers
 
 DBpedia is very friendly for web scraping. 
 
@@ -178,7 +178,7 @@ Given the large amount, it took a while to go through all the names in the datab
 
 Next, we can integrate the speaker database with the corpus created in step 3. 
 
-#### Step 5: Create a lean corpus
+#### Step 5: Creating a lean corpus
 
 We can calculate the speaker's age by the speaker's name and birthday. 
 
@@ -218,7 +218,7 @@ We can calculate the speaker's age by the speaker's name and birthday.
                 ...
 ```
 
-### Step 6: Extract video snippets
+### Step 6: Extracting video snippets
 
 Now, we have everything we need to extract the video snippets:  the input path (video path), the output path (snippet path), the start time and the end time. 
 
