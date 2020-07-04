@@ -286,15 +286,15 @@ Now, we have everything we need to extract the video snippets:  the input path (
   *Peek into the tpt file:*
   
   ```
-...
-  20180415101153.580|20180415101157.184|NER_01|Person=Christi Paul|Role=CNN ANCHOR
-20180415101153.580|20180415101155.048|CC1|>> PAUL: Sure. So, Juliette, if you are not going to get involved in a civil war and you are not going to displace this 
-  20180415101155.115|20180415101156.550|CC1|leader, what are the 
-20180415101156.617|20180415101157.117|CC1|options? 
-  20180415101157.184|20180415101255.743|NER_01|Person=Juliette Kayyem|Role=CNN NATIONAL SECURITY ANALYST
-20180415101157.184|20180415101158.352|CC1|>> KAYYEM: So, there's two focuses that we will see 
-  20180415101158.418|20180415101158.952|CC1|in the future. 
-...
+	...
+	  20180415101153.580|20180415101157.184|NER_01|Person=Christi Paul|Role=CNN ANCHOR
+	20180415101153.580|20180415101155.048|CC1|>> PAUL: Sure. So, Juliette, if you are not going to get involved in a civil war and you are not going to displace this 
+	  20180415101155.115|20180415101156.550|CC1|leader, what are the 
+	20180415101156.617|20180415101157.117|CC1|options? 
+	  20180415101157.184|20180415101255.743|NER_01|Person=Juliette Kayyem|Role=CNN NATIONAL SECURITY ANALYST
+	20180415101157.184|20180415101158.352|CC1|>> KAYYEM: So, there's two focuses that we will see 
+	  20180415101158.418|20180415101158.952|CC1|in the future. 
+	...
   ```
   
   The transcript contains the text "*Sure. So, Juliette, if you are not going to get involved in a civil war and you are not going to displace this leader, what are the options?*" We locate this text in the transcript, from 11000 to 11139. Hence, get the corresponding `start`(701.83) and `end` time(710.38). 
