@@ -1,13 +1,13 @@
 
 Before we can predict people's age group in a video, we have to build a dataset that can feed into the machine learning model.
 
-- [Phase 1: Building Dataset](#phase-1--building-dataset)
-  * [Step 1: Knowing what to do](#step-1--knowing-what-to-do)
-  * [Step 2: Finding useful paths](#step-2--finding-useful-paths)
-  * [Step 3: Extracting information from the tpt file](#step-3--extracting-information-from-the-tpt-file)
-  * [Step 4: Building a database for speakers](#step-4--building-a-database-for-speakers)
-  * [Step 5: Creating a lean corpus](#step-5--creating-a-lean-corpus)
-  * [Step 6: Extracting video snippets](#step-6--extracting-video-snippets)
+- [Phase 1: Building Dataset](#phase-1:-building-dataset)
+  * [Step 1: Knowing what to do](#step-1:-knowing-what-to-do)
+  * [Step 2: Finding useful paths](#step-2:-finding-useful-paths)
+  * [Step 3: Extracting information from the tpt file](#step-3:-extracting-information-from-the-tpt-file)
+  * [Step 4: Building a database for speakers](#step-4:-building-a-database-for-speakers)
+  * [Step 5: Creating a lean corpus](#step-5:-creating-a-lean-corpus)
+  * [Step 6: Extracting video snippets](#step-6:-extracting-video-snippets)
 
 
 ### Phase 1: Building Dataset
