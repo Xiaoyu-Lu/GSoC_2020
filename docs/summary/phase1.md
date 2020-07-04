@@ -345,7 +345,7 @@ Then, we use this newly created corpus to trim the videos. We name the output fi
    ...
   ```
 
-  For the rest of times, we can normalize the count of time intervals for the speakers in each files.
+  For the rest of "times", we can normalize the count of time intervals for the speakers in each files.
 
   ​	e.g.  James appeared in 5 files. The number of time intervals of each file is stored in an array, nums=[10, 30, 1, 150, 9]. We made 25 times as a threshold, then normalize the array .
 
