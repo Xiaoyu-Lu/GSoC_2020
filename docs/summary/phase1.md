@@ -423,7 +423,7 @@ Then, we use this newly created corpus to trim the videos. We name the output fi
 
   Finally, we have the dataset that can be used for extracting snippets. We put it on the hpc, where all the tv data stored, and use ffmpeg python wrapper to run the code. We have 928 files, 614 unique speakers, 7728 time intervals which means we will have 7728 snippets. 
 
-The script can write all the information of the video snippet into a csv file, if a snippet is extracted from the video. 
+The script can write/append a row contains all the information of the video snippet into a csv file, if a snippet is extracted from the video. 
 
 ![img](https://github.com/Xiaoyu-Lu/GSoC_2020/blob/master/docs/img/phase1-snippets_info_csv.png)
 
