@@ -344,7 +344,7 @@ Then, we use this newly created corpus to trim the videos. We name the output fi
   ```
   ![img](https://github.com/Xiaoyu-Lu/GSoC_2020/blob/master/docs/img/phase1-speakers_count.png)
   
-  For the rest of "times", we can normalize the count of time intervals for the speakers in each files.
+  For the rest of "times", we have to flatten the curve, i.e. normalize the count of time intervals for the speakers in each files.
 
   ​	e.g.  James appeared in 5 files. The number of time intervals of each file is stored in an array, nums=[10, 30, 1, 150, 9]. We made 25 times as a threshold, then normalize the array .
 
@@ -354,6 +354,7 @@ Then, we use this newly created corpus to trim the videos. We name the output fi
 
   ​			Then, we round up and int each numnber. The result would be [2, 4, 1, 19, 2]. 
 
+  Another example:
   ```python
   nums: 
   [1, 2, 2, 1, 2, 1, 1, 1, 2, 1, 3, 1, 3, 1, 1, 1, 2, 2, 1, 4, 2, 1, 3, 5, 3, 2, 4, 2, 1, 3, 1, 1, 3, 2, 7, 2, 1, 6, 13, 1, 5, 2, 1, 4, 4, 2, 1, 3, 3, 2]
