@@ -1,6 +1,6 @@
 Before we can predict people's age group in a video, we have to build a dataset that can feed into the machine learning model.
 
-###Phase 1: Building Dataset
+### Phase 1: Building Dataset
 
 #### Step 1: Knowing what to do
 
