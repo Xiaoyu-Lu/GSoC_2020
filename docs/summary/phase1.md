@@ -159,7 +159,7 @@ So we have a two-step searching mechanism: if the result of searching returns "N
 
   > If *ensure_ascii* is true (the default), all non-ASCII characters in the output are escaped with `\uXXXX` sequences, and the result is a [`str`](https://docs.python.org/2/library/functions.html#str)instance consisting of ASCII characters only. If *ensure_ascii* is false, some chunks written to *fp* may be [`unicode`](https://docs.python.org/2/library/functions.html#unicode) instances. This usually happens because the input contains unicode strings or the *encoding* parameter is used. 
 
-  So if we need to open `http://live.dbpedia.org/data/Pablo_Guzmán_(reporter).json` , it will trigger the error, due to the non-ASCII character `á ` . 
+  The problem is that if we need to use `urllib.request.urlopen` to open `http://live.dbpedia.org/data/Pablo_Guzmán_(reporter).json` , it will trigger the error, due to the non-ASCII character `á ` . 
 
   ```
   UnicodeEncodeError: 'ascii' codec can't encode character '\xe1' in position 20: ordinal not in range(128)
