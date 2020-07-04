@@ -9,3 +9,5 @@ GSoC 2020: Age Group Prediction in Images & Audio
 [Week 3](https://github.com/Xiaoyu-Lu/GSoC_2020/blob/master/docs/week3/week3.md)
 
 [Week 4](https://github.com/Xiaoyu-Lu/GSoC_2020/blob/master/docs/week4/week4.md)
+
+[Summary of Phase1](https://github.com/Xiaoyu-Lu/GSoC_2020/blob/master/docs/summary/phase1.md)
