@@ -218,7 +218,7 @@ We can calculate the speaker's age by the speaker's name and birthday.
                 ...
 ```
 
-### Step 6: Extracting video snippets
+#### Step 6: Extracting video snippets
 
 Now, we have everything we need to extract the video snippets:  the input path (video path), the output path (snippet path), the start time and the end time. 
 
