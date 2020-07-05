@@ -4,7 +4,7 @@
 | ------ | ----------- | ------------------------------------------------------------ |
 | week4  | 06.22-06.28 | extract video snippets and clear up the unwanted files       |
 | week5  | 06.29-07.05 | decide the input and modify a neural network model           |
-| week6  | 07.06-07.12 | train first model                                            |
+| week6  | 07.06-07.12 | train the first model                                        |
 |        |             |                                                              |
 
 #### divided into 3 groups
