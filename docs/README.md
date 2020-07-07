@@ -1,4 +1,4 @@
-GSoC 2020: Age Group Prediction in Images & Audio
+GSoC 2020: Age Group Prediction in TV news
 
 [Community Bonding](https://github.com/Xiaoyu-Lu/GSoC_2020/blob/master/docs/pre_coding.md)
 

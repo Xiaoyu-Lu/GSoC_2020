@@ -3,12 +3,8 @@
 | weeks  | date        | goal                                                         |
 | ------ | ----------- | ------------------------------------------------------------ |
 | week4  | 06.22-06.28 | extract video snippets and clear up the unwanted files       |
-| week5  | 06.29-07.05 | video: get familiar with "Age and Gender Classification Using Convolutional Neural Networks"  and opencv, testing the pretrained model |
-| week6  | 07.06-07.12 | video: training the model using tv dataset                   |
-| week7  | 07.13-07.19 | video: predicting and evaluating the model                   |
-| week8  | 07.20-07.26 | audio: training the model using tv dataset                   |
-| week9  | 07.27-08.02 | audio: predicting and evaluating the model                   |
-| week10 | 08.03-08.09 | constructing the video pipeline                              |
+| week5  | 06.29-07.05 | decide the input and modify a neural network model           |
+| week6  | 07.06-07.12 | train the first model                                        |
 |        |             |                                                              |
 
 #### divided into 3 groups
