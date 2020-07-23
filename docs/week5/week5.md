@@ -102,7 +102,7 @@ So, from 0 second to 0.667 is one speaker, from 1.935 s is another. This time in
 [ 00:00:01.935 -->  00:00:05.606] 1 7
 ```
 
-Now, we have the binding box of label 7 for each frame. This could use as input for our upcoming training model.
+Now, we have the binding box of label 7 for each frame. This could be used as the input for our upcoming training model.
 
  
 
