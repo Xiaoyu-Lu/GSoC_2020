@@ -177,7 +177,7 @@ Once we have all the files, we cluster the face. After clustering, we extract th
 
 ![aaron-david-miller](https://github.com/Xiaoyu-Lu/GSoC_2020/blob/master/docs/img/phase2-cropped-dir.png)
 
-![cropped](https://github.com/Xiaoyu-Lu/GSoC_2020/blob/master/docs/img/phase2-cropped-image.png)
+![cropped](https://github.com/Xiaoyu-Lu/GSoC_2020/blob/master/docs/img/phase2-cropped-image-female.png)
 
 
 
