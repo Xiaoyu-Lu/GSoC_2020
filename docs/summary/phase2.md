@@ -134,7 +134,7 @@ The speaker showed up in different news program, we have to group those snippets
 
 #### Step2: Face detection, tracking and embedding
 
-![news-imgs] (https://github.com/Xiaoyu-Lu/GSoC_2020/blob/master/docs/img/phase2-shows.png)
+![news-imgs](https://github.com/Xiaoyu-Lu/GSoC_2020/blob/master/docs/img/phase2-shows.png)
 
 More then one person could exist on one screen, we have to identify which one is the speaker. Here, we use the open source tool [pyannote-video](https://github.com/pyannote/pyannote-video) to get the work done. 
 
