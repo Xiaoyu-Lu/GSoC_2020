@@ -112,7 +112,7 @@ Based on this json file, we can extract snippets from the original news video.
 
 We decide to use nerual network to train the model. The training input should be faces images:
 
-![face-img]
+![face-img](https://github.com/Xiaoyu-Lu/GSoC_2020/blob/master/docs/img/phase2-wiki.png)
 
 #### Step1: Snippets concatenation
 
@@ -134,9 +134,9 @@ The speaker showed up in different news program, we have to group those snippets
 
 #### Step2: Face detection, tracking and embedding
 
-![news-imgs] 
+![news-imgs] (https://github.com/Xiaoyu-Lu/GSoC_2020/blob/master/docs/img/phase2-shows.png)
 
-More then one person showed up on the screen, we have to identify which one is the speaker. Here, we use the open source tool [pyannote-video](https://github.com/pyannote/pyannote-video) to get the work done. 
+More then one person could exist on one screen, we have to identify which one is the speaker. Here, we use the open source tool [pyannote-video](https://github.com/pyannote/pyannote-video) to get the work done. 
 
 `merged_snippets/*.mp4` ➔ `datasetBuilder_5_track_embed.sh` *(pyannote virtual enviroment)* ➔ `merged_snippets/*.shots.json` & `merged_snippets/*.track.txt `& `merged_snippets/*.landmarks.txt` & `merged_snippets/*.embedding.txt`
 
