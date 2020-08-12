@@ -1,3 +1,22 @@
+- [Summary of Phase 1:](#summary-of-phase-1)
+
+  * [Review1: Get rough corpus](#review1-get-rough-corpus)
+  
+  * [Review2: Build speakers' database](#review2-build-speakers--database)
+  
+  * [Review3: Form lean corpus](#review3-form-lean-corpus)
+  
+  * [Review4: Extract video snippets](#review4-extract-video-snippets)
+  
+- [Phase 2: Perparing Neural Net Input](#phase-2-perparing-neural-net-input)
+
+  * [Step1: Snippets concatenation](#step1-snippets-concatenation)
+  
+  * [Step2: Face detection, tracking and embedding](#step2-face-detection--tracking-and-embedding)
+  
+  * [Step3: Face clustering and image cropping](#step3-face-clustering-and-image-cropping)
+
+
 ### Summary of Phase 1:
 
 At the end of Phase 1, we got a csv file that contains all the information of file path, start and end times, speakers' name, age and gender, etc. 
