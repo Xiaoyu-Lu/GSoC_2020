@@ -116,7 +116,7 @@ We decide to use nerual network to train the model. The training input should be
 
 #### Step1: Snippets concatenation
 
-The speaker showed up in different news program, we have to group those snippets together.
+Since a speaker might show up in different news program, we had to concatenate the snippets of one speaker together into one video clip.
 
 `snippets/*.mp4` & `snippets_info_with_age_gender.csv` ➔ `datasetBuilder_4_concat` ➔ `merged_snippets/*.mp4` & `merged_snippets/merged_files.txt`
 
