@@ -171,7 +171,7 @@ More then one person could exist on one screen, we have to identify which one is
 
 #### Step3: Face clustering and image cropping
 
-Once we have all the files, we cluster the face. After clustering, we extract the frames that contains the speaker and crop out the face based on its coordinates.
+Once we have all four files above for each concatenated video clip, we feed the files into pyannotate, which labels each unique face with a unique integer label. We assume the face of the speaker to extract has the most label occurences among all identified faces. After clustering the faces and identifying the speaker's face, we extract the frames that contains the speaker based on time points and crop out the face based on its coordinates.
 
 `merged_snippets/*.mp4 `& `merged_snippets/*.embedding.txt` &`merged_snippets/*.track.txt` ➔ `datasetBuilder_6_cluster_imgcrop.py` *(pyannote virtual enviroment)* ➔ `merged_snippets/*_frames` & `merged_snippets/cropped_frames/*_cropped_frames`
 
