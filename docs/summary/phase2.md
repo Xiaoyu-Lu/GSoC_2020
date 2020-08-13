@@ -257,7 +257,7 @@ We use ffmpeg to extract the frame at specific time:
 ```
 ffmpeg -ss $time -i $input_video -vframes 1 -q:v 2 $output.jpg
 ```
-Then we examine bounding box in the track file:
+Then we examine the data of bounding box in the track file:
 ```
 # left   = bounding box left boundary (unit = ratio of frame width)
 # top    = bounding box top boundary (unit = ratio of frame height)
