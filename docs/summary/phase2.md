@@ -253,7 +253,7 @@ For each track group, we randomly select one as the frame to extract:
 9  57.958     14  0.152  0.251  0.231   0.392  forward+backward
  ```
 
-We use ffmpeg to cut the frame:
+We use ffmpeg to extract the frame at specific time:
 ```
 ffmpeg -ss $time -i $input_video -vframes 1 -q:v 2 $output.jpg
 ```
