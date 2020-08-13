@@ -25,6 +25,8 @@ At the end of Phase 1, we got a csv file that contains all the information of fi
 
 We started from the gentle output (force aligned output), convert it into a json structure. 
 
+`input`➔ `script` ➔ `output`
+
 `gentle_paths.txt`➔ `datasetBuilder_0_gentle_and_tpt.py` ➔ `corpus_2018_new.json`
 
 *Peek into the corpus_2018_new.json file:*
