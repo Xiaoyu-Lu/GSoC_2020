@@ -173,7 +173,9 @@ More then one person could exist on one screen, we have to identify which one is
 
 Once we have all four files above for each concatenated video clip, we feed the files into pyannotate, which labels each unique face with a unique integer label. We assume the face of the speaker to extract has the most label occurences among all identified faces. After clustering the faces and identifying the speaker's face, we extract the frames that contains the speaker based on time points and crop out the face based on its coordinates.
 
-For example, the result of the face clustering should look like as follows:
+`merged_snippets/*.mp4 `& `merged_snippets/*.embedding.txt` &`merged_snippets/*.track.txt` ➔ `datasetBuilder_6_cluster_imgcrop.py` *(pyannote virtual enviroment)* ➔ `merged_snippets/*_frames` & `merged_snippets/cropped_frames/*_cropped_frames`
+
+For example, the result of the face clustering using the embedding file should look like as follows:
 ```
 [ start_time   -->  end_time] track label
 [ 00:00:00.000 -->  00:00:01.468] 0 0
@@ -251,7 +253,6 @@ For each track group, we randomly select one as the frame to extract:
 9  57.958     14  0.152  0.251  0.231   0.392  forward+backward
  ```
 
-`merged_snippets/*.mp4 `& `merged_snippets/*.embedding.txt` &`merged_snippets/*.track.txt` ➔ `datasetBuilder_6_cluster_imgcrop.py` *(pyannote virtual enviroment)* ➔ `merged_snippets/*_frames` & `merged_snippets/cropped_frames/*_cropped_frames`
 
 ![aaron-david-miller](https://github.com/Xiaoyu-Lu/GSoC_2020/blob/master/docs/img/phase2-cropped-dir.png)
 
