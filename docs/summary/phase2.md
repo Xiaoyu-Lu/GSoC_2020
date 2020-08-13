@@ -173,6 +173,84 @@ More then one person could exist on one screen, we have to identify which one is
 
 Once we have all four files above for each concatenated video clip, we feed the files into pyannotate, which labels each unique face with a unique integer label. We assume the face of the speaker to extract has the most label occurences among all identified faces. After clustering the faces and identifying the speaker's face, we extract the frames that contains the speaker based on time points and crop out the face based on its coordinates.
 
+For example, the result of the face clustering should look like as follows:
+```
+[ start_time   -->  end_time] track label
+[ 00:00:00.000 -->  00:00:01.468] 0 0
+[ 00:00:01.502 -->  00:00:03.570] 1 9
+[ 00:00:03.604 -->  00:00:07.107] 2 9
+[ 00:00:07.074 -->  00:00:11.178] 3 9
+[ 00:00:07.207 -->  00:00:08.509] 4 4
+[ 00:00:08.742 -->  00:00:11.178] 5 8
+[ 00:00:11.512 -->  00:00:15.616] 6 6
+[ 00:00:12.679 -->  00:00:23.590] 7 9
+[ 00:00:16.216 -->  00:00:31.198] 8 8
+[ 00:00:23.524 -->  00:00:31.198] 9 9
+[ 00:00:31.765 -->  00:00:39.540] 10 9
+[ 00:00:39.573 -->  00:00:40.841] 11 9
+[ 00:00:40.874 -->  00:00:41.475] 12 9
+[ 00:00:41.408 -->  00:00:50.551] 13 9
+[ 00:00:50.584 -->  00:00:59.393] 14 9
+[ 00:00:52.152 -->  00:00:55.489] 15 15
+[ 00:00:55.389 -->  00:00:58.325] 16 18
+[ 00:00:57.758 -->  00:00:58.792] 17 17
+[ 00:00:58.225 -->  00:00:58.792] 18 18
+
+json version: 
+{'pyannote': 'Annotation', 'content': [{'segment': {'start': 0.0, 'end': 1.4680000000000002}, 'track': 0, 'label': 0}, {'segment': {'start': 1.5019999999999998, 'end': 3.57}, 'track': 1, 'label': 9}, {'segment': {'start': 3.6039999999999996, 'end': 7.107}, 'track': 2, 'label': 9}, {'segment': {'start': 7.074, 'end': 11.177999999999999}, 'track': 3, 'label': 9}, {'segment': {'start': 7.207000000000001, 'end': 8.509}, 'track': 4, 'label': 4}, {'segment': {'start': 8.742, 'end': 11.177999999999999},...
+```
+We find the mode label, in this case is 9. Therefore, we determine that the speaker to extract corresponds to label 9. 
+
+Then, we read the tracking file:
+```
+           t  track   left    top  right  bottom     status
+0      0.000      0  0.328  0.185  0.530   0.541  detection
+1      0.033      0  0.331  0.182  0.536   0.544    forward
+2      0.067      0  0.328  0.185  0.530   0.541    forward
+3      0.100      0  0.333  0.182  0.537   0.544    forward
+4      0.133      0  0.330  0.185  0.533   0.541    forward
+     ...    ...    ...    ...    ...     ...        ...
+2414  59.293     14  0.156  0.243  0.236   0.384    forward
+2415  59.326     14  0.153  0.246  0.233   0.387    forward
+2416  59.359     14  0.150  0.251  0.231   0.392    forward
+2417  59.393     14  0.150  0.254  0.230   0.398    forward
+2418  59.426     14  0.147  0.260  0.227   0.401    forward
+
+[2659 rows x 7 columns]
+```
+Then, we select those tracks with label 9:
+```
+           t  track   left    top  right  bottom    status
+45     1.502      1  0.306  0.174  0.369   0.282  backward
+46     1.535      1  0.305  0.171  0.369   0.282  backward
+47     1.568      1  0.306  0.174  0.369   0.282  backward
+48     1.602      1  0.303  0.171  0.367   0.285  backward
+49     1.635      1  0.303  0.174  0.366   0.282  backward
+     ...    ...    ...    ...    ...     ...       ...
+2414  59.293     14  0.156  0.243  0.236   0.384   forward
+2415  59.326     14  0.153  0.246  0.233   0.387   forward
+2416  59.359     14  0.150  0.251  0.231   0.392   forward
+2417  59.393     14  0.150  0.254  0.230   0.398   forward
+2418  59.426     14  0.147  0.260  0.227   0.401   forward
+
+[1685 rows x 7 columns]
+```
+For each track group, we randomly select one as the frame to extract:
+
+```
+        t  track   left    top  right  bottom            status
+0   1.902      1  0.300  0.171  0.366   0.285          backward
+1   5.105      2  0.420  0.182  0.589   0.478  forward+backward
+2   7.641      3  0.164  0.246  0.244   0.384  forward+backward
+3  14.815      7  0.169  0.238  0.250   0.378  forward+backward
+4  24.024      9  0.167  0.260  0.236   0.381  forward+backward
+5  32.266     10  0.403  0.177  0.573   0.478  forward+backward
+6  40.007     11  0.303  0.160  0.367   0.276  forward+backward
+7  41.041     12  0.405  0.188  0.572   0.483          backward
+8  47.814     13  0.388  0.210  0.555   0.506  forward+backward
+9  57.958     14  0.152  0.251  0.231   0.392  forward+backward
+ ```
+
 `merged_snippets/*.mp4 `& `merged_snippets/*.embedding.txt` &`merged_snippets/*.track.txt` ➔ `datasetBuilder_6_cluster_imgcrop.py` *(pyannote virtual enviroment)* ➔ `merged_snippets/*_frames` & `merged_snippets/cropped_frames/*_cropped_frames`
 
 ![aaron-david-miller](https://github.com/Xiaoyu-Lu/GSoC_2020/blob/master/docs/img/phase2-cropped-dir.png)
