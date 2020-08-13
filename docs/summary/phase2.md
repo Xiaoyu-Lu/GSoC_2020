@@ -240,7 +240,7 @@ Then, we select those tracks with label 9:
 For each track group, we randomly select one as the frame to extract:
 
 ```
-        t  track   left    top  right  bottom            status
+     time  track   left    top  right  bottom            status
 0   1.902      1  0.300  0.171  0.366   0.285          backward
 1   5.105      2  0.420  0.182  0.589   0.478  forward+backward
 2   7.641      3  0.164  0.246  0.244   0.384  forward+backward
@@ -253,6 +253,24 @@ For each track group, we randomly select one as the frame to extract:
 9  57.958     14  0.152  0.251  0.231   0.392  forward+backward
  ```
 
+We use ffmpeg to cut the frame:
+```
+ffmpeg -ss $time -i $input_video -vframes 1 -q:v 2 $output.jpg
+```
+Then we examine bounding box in the track file:
+```
+# left   = bounding box left boundary (unit = ratio of frame width)
+# top    = bounding box top boundary (unit = ratio of frame height)
+# right  = bounding box right boundary (unit = ratio of frame width)
+# bottom = bounding box bottom boundary (unit = ratio of frame width)
+  left    top  right  bottom
+ 0.300  0.171  0.366   0.285
+ ```
+So we have to transform the float into the integer that corresponds to the extracted frame. Because the face takes up too much portion of the images, it will be better to enlarge the bounding box. For example, the box is enlarged by 20%:
+```
+original face box coordinates:  192 234 61 103
+enlarged face box coordinates:  183 242 52 111
+```
 
 ![aaron-david-miller](https://github.com/Xiaoyu-Lu/GSoC_2020/blob/master/docs/img/phase2-cropped-dir.png)
 
