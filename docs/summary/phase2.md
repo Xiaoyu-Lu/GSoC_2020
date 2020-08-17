@@ -23,7 +23,9 @@ At the end of Phase 1, we got a csv file that contains all the information of fi
 
 #### Review1: Get rough corpus
 
-We started from the gentle output (force aligned output), convert it into a json structure. 
+We start from the gentle output (force aligned output), convert it into a json structure. 
+
+`input`➔ `script` ➔ `output`
 
 `gentle_paths.txt`➔ `datasetBuilder_0_gentle_and_tpt.py` ➔ `corpus_2018_new.json`
 
@@ -72,7 +74,7 @@ We use this json file to get the speakers' informtion by web scraping.
 
 #### Review3: Form lean corpus
 
-Input the both output file from above into the python script to get a well formed structure. 
+Input the both output files from above into a python script to get a well-formed structure. 
 
 `corpus_2018_new.json` & ` speaker_db.json`   ➔ `datasetBuilder_2_lean.py` ➔ `lean_corpus_2018_trimmed.json`
 
