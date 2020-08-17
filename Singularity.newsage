@@ -25,4 +25,4 @@ From:ubuntu:latest
         pip3 install  pandas
         pip3 install  dlib
         pip3 install opencv-python
-        pip install pyannote-video
+        pip3 install pyannote-video
