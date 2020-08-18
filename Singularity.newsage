@@ -17,7 +17,8 @@ From:ubuntu:latest
         pip3 install pandas
         pip3 install ffmpeg
         pip3 install ffmpeg-python
-        pip3 install pyannote-video
         pip3 install scikit-learn
         pip3 install opencv-python
+        pip3 install pyannote-video
+
         
