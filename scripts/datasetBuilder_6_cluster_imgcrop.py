@@ -26,7 +26,7 @@ DTYPE = {'left': np.float32, 'top': np.float32,
           'right': np.float32, 'bottom': np.float32}
 
 ROOT_DIR = './merged_snippets'
-SHELL_SCRIPT = "./cut_frames.sh"
+SHELL_SCRIPT = "./scripts/cut_frames.sh"
 
 
 def face_clustering(embedding_file):
