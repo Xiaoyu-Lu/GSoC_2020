@@ -15,7 +15,6 @@ From:ubuntu:latest
         python3.6 -m pip install -U pip
         python3.6 -m pip install --upgrade pip
         python3.6 -m pip install -U setuptools
-        python3.6 -m pip install opencv-python\
-                                 pyannote-video \
+        python3.6 -m pip install pyannote-video \
 
         
