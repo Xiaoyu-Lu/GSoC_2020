@@ -13,12 +13,12 @@ From:ubuntu:latest
         apt-get update
         apt-get install -y python3.6
         apt-get install -y python3-pip
-        pip3 install numpy
-        pip3 install pandas
-        pip3 install ffmpeg
-        pip3 install ffmpeg-python
-        pip3 install scikit-learn
-        pip3 install opencv-python==3.4.1.15
-        pip3 install pyannote-video
+        pip install numpy
+        pip install pandas
+        pip install ffmpeg
+        pip install ffmpeg-python
+        pip install scikit-learn
+        pip install opencv-python
+        pip install pyannote-video
 
         
