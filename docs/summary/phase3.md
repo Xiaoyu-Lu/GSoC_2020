@@ -1,4 +1,4 @@
-- [WESummary of Phase 1&2:](#summary-of-phase-1&2)
+- [Summary of Phase 1&2:](#summary-of-phase-1&2)
 
 - [Phase 3: Model Training and Prediction](#phase-3-model-training-and-prediction)
   * [Step1: Data Preprocessing](#data-preprocessing)
