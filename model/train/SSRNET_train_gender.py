@@ -102,7 +102,7 @@ def main():
     mk_dir(db_name+"_checkpoints")
     plot_model(model, to_file=db_name+"_gender_models/"+save_name+"/"+save_name+".png")
 
-    with open(os.path.join(db_name+"_models/"+save_name, save_name+'.json'), "w") as f:
+    with open(os.path.join(db_name+"_gender_models/"+save_name, save_name+'.json'), "w") as f:
         f.write(model.to_json())
 
     

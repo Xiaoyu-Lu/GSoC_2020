@@ -46,7 +46,7 @@ python3 ./scripts/datasetBuilder_4_concat.py
 # the images in the "./merged_snippets/cropped_frames" directory are the one we needed for model training
 python3 ./scripts/corpus_constructor_6_face_cluster.py 
 
-# cope the output dir to the model data dir
+# copy the output dir to the model data dir
 cp -R  merged_snippets/cropped_frames model/data/news
 
 
