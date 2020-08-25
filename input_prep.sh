@@ -1,4 +1,4 @@
-#!/bin/bash
+# #!/bin/bash
 mkdir -p output
 # get gentle paths in 2018 directory
 year=2018
@@ -42,9 +42,9 @@ python3 ./scripts/datasetBuilder_4_concat.py
 # https://github.com/pyannote/pyannote-video
 . ./scripts/datasetBuilder_5_track_embed.sh
 
-# do face clustering
+# face clustering
 # the images in the "./merged_snippets/cropped_frames" directory are the one we needed for model training
-python3 ./scripts/corpus_constructor_6_face_cluster.py 
+python3 ./scripts/datasetBuilder_6_cluster_imgcrop.py
 
 # copy the output dir to the model data dir
 cp -R  merged_snippets/cropped_frames model/data/news
