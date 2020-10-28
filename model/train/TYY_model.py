@@ -38,8 +38,9 @@ class TYY_MobileNet_reg:
         model_mobilenet = MobileNet(input_shape=self._input_shape, alpha=self.alpha, depth_multiplier=1, dropout=1e-3, include_top=False, weights=None, input_tensor=None, pooling=None)
         x = model_mobilenet(inputs)
         #flatten = Flatten()(x)
+        #         
         
-        feat_a = Conv2D(20,(1,1),activation='relu')(x)
+        feat_a = Conv2D(20,(1,1),activation='relu',kernel_initializer='he_uniform')(x)  
         feat_a = Flatten()(feat_a)
         feat_a = Dropout(0.2)(feat_a)
         feat_a = Dense(32,activation='relu',name='feat_a')(feat_a)
